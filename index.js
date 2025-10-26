@@ -6,7 +6,7 @@ const cors = require('cors');
 const { protect } = require('./authMiddleware');
 // --- Configuración ---
 const app = express();
-const PORT = 3001; // El backend correrá en el puerto 3001
+const PORT = process.env.PORT || 3001; // Render usará process.env.PORT// El backend correrá en el puerto 3001
 const JWT_SECRET = 'Practicando aplicacion web con react y node js'; // Clave secreta para JWT
 
 // Configuración de la Base de Datos
